@@ -1,0 +1,17 @@
+We are going to create a function that shows the relationship between height and weight for a healthy body using Python. This is based on the Body Mass Index (BMI).
+
+Data:
+We have a table that shows the average weight of a healthy body for different heights.
+
+Height (in inches)	58	60	61	64	66	69	70	71	72	73
+Weight (in pounds)	102	109	113	125	133	146	149	153	158	162
+Source: American Cancer Society
+
+What We Will Do:
+Use Python: We'll use Python to calculate a line that best fits the given data. This line will help us predict the weight for any given height.
+Linear Regression: The method we'll use is called linear regression. It helps us find the best-fitting straight line through a set of points.
+How It Works:
+Collect Data: We have the heights and corresponding weights.
+Plot Data: We'll plot this data on a graph.
+Find the Line: Using Python, we'll calculate the line that best fits this data. This line is called the regression line.
+Predict: With this line, we can predict the average weight for any height.
