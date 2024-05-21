@@ -15,3 +15,50 @@ Collect Data: We have the heights and corresponding weights.
 Plot Data: We'll plot this data on a graph.
 Find the Line: Using Python, we'll calculate the line that best fits this data. This line is called the regression line.
 Predict: With this line, we can predict the average weight for any height.
+
+
+import random as r
+import math as m
+import numpy as np
+import matplotlib as mp
+import matplotlib.pyplot as plt
+
+
+I used this function to help me find BestfitLine.
+
+# Create the list for the data h is the heigh of the person w is the average wei!
+h= [58,60,61,64,66,69,70,71,72,73]
+w= [102,109,113,125,133,146,149,153, 158,162]
+def bestFitLine(x,y) :
+    N= len (x)
+    sx=0 # the sum of x values
+    sy=0 # the sum of y values
+    sxy=0 # The sum of product of corresponding x and y values
+    sx2=0 # The sum of squers of x values
+    for i in range(N):
+        sx=sx+x[i]
+        sy=sy+y [i]
+        sxy=sxy+x[i]*y[i]
+        sx2=sx2+x[i]*x[i]
+    m= (N*sxy-sx*sy) / (N*sx2-sx*sx)
+    b=(sy-m* sx)/N
+    return m,b  
+
+
+I used this function to find correlation coefficient
+
+# Create the function to find connelation coefficient.
+def corrCoefficient(x,y):
+    N=len (x)
+    sx=0 # the sum of x values
+    sy=0 # the sum of y values
+    sxy=0 # The sum of product of corresponding x and y values
+    sx2=0 # The sum of squers of x values
+    sy2=0 # The sum of squers of y values
+    for i in range(N):
+        sy=sy+y[i]
+        sxy=sxy+x[i]*y[i]
+        sx2=sx2+x[i]*x[i]
+        sy2=sy2+y[i]*y[i]
+        r=(N*sxy-sx*sy)/np. sqrt((N*sx2-sx*sx) * (N*sy2-sy*sy))
+        return r
